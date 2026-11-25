@@ -33,3 +33,11 @@ src/
 ```
 
 Produktionsbuild: `npm run build`
+
+## Container-Image
+
+Bei jedem Push auf `main` baut GitHub Actions das Docker-Image und veröffentlicht
+es in der GitHub Container Registry als `ghcr.io/<owner>/<repository>:latest`
+und mit einem unveränderlichen Commit-Tag (`sha-<commit>`). Zum Abruf des Images
+muss das GitHub-Paket gegebenenfalls in den Paket-Einstellungen auf öffentlich
+gestellt werden.
